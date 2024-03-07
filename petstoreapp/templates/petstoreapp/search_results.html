@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} Pets Search Page {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+    <h2 class="mt-4 mb-4">Search Results </h2>
+    <!-- try to display the search query to end user -->
+    {% if search_query %}
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            Showing results for : <strong>{{ search_query }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endif %}
+    <ul class="list-group">
+        {% for pet in pets %}
+            <li class="list-group-item">
+                <div class="d-flex w-100 justify-content-between">
+                    <h2>{{ pet.name }}</h2>  
+                    <h3>{{ pet.breed }}</h3>
+                    <h4>{{ pet.price }}</h4>
+                </div>
+                <p>
+                    {% if pet.image %}
+                        <img src="{{ pet.image.url }}" class="img-fluid rounded">
+                    {% else %}
+                        <p>No Image</p>
+                    {% endif %}
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Petstore Management System </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'petstoreb.css' %}" >
+        <!--This erea is for bootstrap dwon her -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+
+    </head>
+
+    <body>
+        <header>
+            <h1>Petstore Management System</h1>
+            {% include 'petstoreapp/nav.html'%}
+        </header>
+
+        <div>
+            {% block content %}
+            Welcome to the Petstore management system. 
+            This system is designed and developed in Django.
+            {% endblock %}
+        </div>
+
+        <footer>
+            <p> &copy; 2024 Petstore Management System: E-408</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

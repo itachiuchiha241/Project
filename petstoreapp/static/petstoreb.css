@@ -1,0 +1,85 @@
+h1 {
+    color: rgb(159, 64, 248);
+    filter: drop-shadow(0 0 10px rgb(206, 154, 254));
+}
+
+h2 {
+    color: rgb(153, 49, 244);
+    filter: drop-shadow(0 0 10px rgb(206, 154, 254));
+    
+}
+.dname a {
+    color: blueviolet; 
+    text-decoration: none;
+    background-color: transparent;
+    filter: drop-shadow(0 0 3px rgb(206, 154, 254));
+}
+
+
+.bg-dark {
+    background-color: blueviolet !important;
+}
+
+.pet-list {
+    padding: 10px;
+    list-style-type: none;
+}
+
+.pet-list li {
+    padding: 10px;
+    border-bottom: 1px solid violet;
+}
+
+.pet-list li:last-child{
+    border-bottom: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form p{
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+form input [type = "text"],
+form input [type = "number"]
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgb(235, 149, 73);
+
+}
+
+form button.btn-save {
+    background-color:blueviolet;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn.btn-primary:hover {
+    background-color: white;
+    color: blueviolet;
+  }
+
+.custom-btn {
+    background-color: violet;
+}
+
+.nav-link:hover {
+    color: blueviolet;
+}

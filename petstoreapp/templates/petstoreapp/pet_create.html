@@ -1,0 +1,42 @@
+<!--This is Pet_create.html Extand file-->
+{% extends 'base.html' %}
+
+{% block title %} Add Pet {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+    <h2 class="mt-4 mb-4">Add a Pet</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+       
+        <div class="form-group">
+            <label for="name">Name</label>
+            
+            {{ form.name }}
+        </div>
+        <div class="form-group">
+            <label for="breed">Breed</label>
+           
+            {{ form.breed }}
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+          
+           {{ form.price }}
+        </div>
+        <div class="form-group">
+            <label for="image">Image</label>
+            
+            {{ form.image }}
+        </div>
+       
+        <div class="form-group">
+            <label for="tags">Tags</label>
+            
+            {{ form.tags }}
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+{% endblock %}

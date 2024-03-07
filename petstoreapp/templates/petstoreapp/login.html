@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-4">
+
+                <div class="card-header">
+                    <h2 class="mt-2 mb-2">Login</h2>
+                </div>
+
+                <div class="card-body" style="background-color: white;" >
+                    <form method="post" class="mt-4">
+                        {% csrf_token %}
+
+                        <div class="form-group">
+                            <label for="username" style="color: violet;">Username:</label>
+                            <input type="text" class="form-control" name="username" id="username">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" style="color: violet;">Password:</label>
+                            <input type="password" class="form-control" name="password" id="password">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary"> Login </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
